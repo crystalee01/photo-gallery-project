@@ -17,10 +17,12 @@ nav {
   margin: 3px;
 }
 .gallery-row {
-  display: inline-block;
-  flex-direction: row;
+  display: flex;
   justify-content: center;
   margin: 10px 0px;
+}
+article {
+  display: flex;
 }
 div {
   margin: 5px;
@@ -31,10 +33,19 @@ img {
 }
 
 @media screen and (max-width: 1024px){
+.gallery-row{
+  flex-direction: column;
+}
+article{
+  justify-content: center;
+}
+}
+@media screen and (max-width: 520px){
 nav {
   flex-direction: column;
 }
-.gallery-row{
-  display: flex;
+article{
+  align-items: center;
+  flex-direction: column;
 }
 }
